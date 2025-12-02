@@ -1,0 +1,75 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* ===== General Reset ===== */
+body {
+    background: #f5f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Card Wrapper ===== */
+.form-wrapper {
+    max-width: 430px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.04);
+}
+
+/* ===== Title ===== */
+.page-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+/* ===== Input Labels ===== */
+label {
+    font-weight: 500;
+    color: #34495e;
+}
+
+/* ===== Input Style ===== */
+.form-control {
+    border-radius: 8px;
+    padding: 10px 12px;
+    border: 1px solid #cfd6dd;
+    transition: 0.2s;
+}
+
+.form-control:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 0.1rem rgba(108, 99, 255, 0.25);
+}
+
+/* ===== Submit Button ===== */
+.btn-primary {
+    background-color: #6c63ff;
+    border-color: #6c63ff;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #584dfc;
+    border-color: #584dfc;
+}
+
+/* ===== Error Message ===== */
+.alert-danger {
+    border-radius: 8px;
+    padding: 12px;
+}
