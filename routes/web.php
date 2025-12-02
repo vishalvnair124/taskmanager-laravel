@@ -16,8 +16,9 @@ Route::get('/register', [RegisterController::class, 'show'])->name('register.sho
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
 // Login routes
-Route::get('/login', [LoginController::class, 'show'])->name('login.show');
+Route::get('/login', [LoginController::class, 'show'])->name('login');
 Route::post('/login', [LoginController::class, 'store'])->name('login.store');
+
 
 // Logout route
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');

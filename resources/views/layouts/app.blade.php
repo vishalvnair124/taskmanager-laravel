@@ -25,14 +25,17 @@
     {{-- Navbar --}}
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('home') }}">TaskManager</a>
-
+            @auth
+            <a class="navbar-brand" href="{{ route('dashboard') }}">TaskManager</a>
+            @else
+             <a class="navbar-brand" href="{{ route('home') }}">TaskManager</a>
+            @endauth
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     @auth
                     <li class="nav-item">
                         <span class="navbar-text me-3">
@@ -54,7 +57,7 @@
                     </li>
                     @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login.show') }}">Login</a>
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('register.show') }}">Register</a>

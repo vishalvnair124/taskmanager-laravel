@@ -67,5 +67,11 @@
             Register
         </button>
     </form>
+    <p class="text-center mt-3 mb-0">
+        <small>
+            Already have an account?
+            <a href="{{ route('login') }}">Login</a>
+        </small>
+    </p>
 </div>
 @endsection
